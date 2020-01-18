@@ -25,8 +25,10 @@ import matplotlib.pyplot as plt
 """
 
 # set save path
-global log_path = "./log"
-global model_path = "./model/"
+global log_path
+log_path = "./log"
+global model_path
+model_path = "./model/"
 
 def load(self, root=None):
     log = self.Log_sheet(sheet_path=root)

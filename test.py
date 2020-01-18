@@ -4,7 +4,7 @@ import mllogger
 
 # prepare and make directory for recording log files.
 ## must always start by this function; Logger
-logger = mllogger.Logger("testlogger")
+logger = mllogger.Logger("testlogger", save_inside=True)
 #%%
 # prepare logfiles as an object.
 ## naming must be string or list of strings
