@@ -6,7 +6,7 @@ import mllogger
 ## must always start by this function; Logger
 logger_name = "testlogger"
 logger = mllogger.Logger(logger_name=logger_name, allow_duplicate=True, save_inside=True)
-## allow_duplicate use for make output log has no version, i.e., ฟfter running it again, it will save the previous.
+## allow_duplicate use for make output log has no version, i.e., after running it again, it will save the previous.
 ## save_inside make log and model directories within the current one.
 
 ## save_inside 
