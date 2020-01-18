@@ -4,7 +4,12 @@ import mllogger
 
 # prepare and make directory for recording log files.
 ## must always start by this function; Logger
-logger = mllogger.Logger("testlogger", save_inside=True)
+logger_name = "testlogger"
+logger = mllogger.Logger(logger_name=logger_name, allow_duplicate=True, save_inside=True)
+## allow_duplicate use for make output log has no version, i.e., ฟfter running it again, it will save the previous.
+## save_inside make log and model directories within the current one.
+
+## save_inside 
 #%%
 # prepare logfiles as an object.
 ## naming must be string or list of strings
@@ -32,7 +37,9 @@ log["test_log"].plot(x_label="Epoches", y_label="Y", line_label="a line", title=
 #%%
 # load data in a log file.
 # First, we must make a Log_sheet object with specific file path.
-log_load = mllogger.Log_sheet(sheet_path="./log/testlogger/test_log.csv")
+log_load = mllogger.Log_sheet(sheet_name="test_log", sheet_root="./log/testlogger", sheet_path="./log/testlogger/test_log.csv")
+# Or althernative mllogger.Log_sheet(sheet_path="./log/testlogger/test_log.csv") 
+# to detail Object and allow to use .save and .record method.
 ## Now, we are able to use .get and .plot
 print(log_load.get())
 print(log_load.get(all=True))
@@ -40,10 +47,9 @@ log_load.plot()
 
 #%%
 # save machine learning 
-model_name = "modelA"
 amodel = object()
 print(type(amodel))
-logger.model_log(root=model_name, model=amodel) 
+logger.model_log(root=logger_name, model=amodel) # save model method.
 
 #%%
 # make many log files.
