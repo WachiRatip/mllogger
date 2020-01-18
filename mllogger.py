@@ -30,10 +30,6 @@ log_path = "./log"
 global model_path
 model_path = "./model/"
 
-def load(self, root=None):
-    log = self.Log_sheet(sheet_path=root)
-    return log
-
 class Logger():
     def __init__(self, logger_name, allow_duplicate=False, save_inside=False):
         """
