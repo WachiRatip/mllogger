@@ -24,12 +24,6 @@ import matplotlib.pyplot as plt
     |_modelsave.pkl.tar
 """
 
-# set save path
-global log_path
-log_path = "./log"
-global model_path
-model_path = "./model/"
-
 class Logger():
     def __init__(self, logger_name, allow_duplicate=False, save_inside=False):
         """
@@ -38,6 +32,12 @@ class Logger():
         save_inside : Boolean. If True, log/model will be saved in current directory. 
                       If False, log/model will be saved in previous directory. Defualt is False. 
         """
+        # set save path
+        global log_path
+        log_path = "./log"
+        global model_path
+        model_path = "./model/"
+
         if not save_inside:
             log_path = "../log"
             model_path = "../model/"
