@@ -37,7 +37,8 @@ class Logger():
         """
         logger_name : String. Name logger's directory
         allow_duplicate : Boolean. If False, log/model will be saved as its version. Defualt is False. 
-        save_inside : Boolean. If True, log/model will be saved in current directory. If False, log/model will be saved in previous directory. Defualt is False. 
+        save_inside : Boolean. If True, log/model will be saved in current directory. 
+                      If False, log/model will be saved in previous directory. Defualt is False. 
         """
         if not save_inside:
             global log_path = "../log"
