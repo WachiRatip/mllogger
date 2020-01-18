@@ -89,8 +89,8 @@ class Logger():
         x, y_a = a_log.read()
         _, y_b = b_log.read()
 
-        plt.plot(x, y_a, label=line_label)
-        plt.plot(x, y_b, label=line_label)
+        plt.plot(x, y_a, label=line_label_a)
+        plt.plot(x, y_b, label=line_label_b)
         plt.xlabel(x_label)
         plt.ylabel(y_label)
         plt.title(title)

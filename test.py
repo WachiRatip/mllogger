@@ -65,4 +65,4 @@ a_log = log_many["test_log_a"] # or althernative a_log = mlogger.Log_sheet(sheet
 b_log = log_many["test_log_b"] # or althernative b_log = mlogger.Log_sheet(sheet_path="./log/testlogger/test_log_b.csv")
 
 ## One can simply use .plot_compare method in Logger
-logger.plot_compare(a_log, b_log, x_label="Epoches", y_label=None, line_label_a=None, line_label_b=None, title=None)
+logger.plot_compare(a_log, b_log, x_label="Epoches", y_label="Y ni", line_label_a="a line", line_label_b="b line", title="None")
