@@ -94,7 +94,7 @@ class Logger():
         plt.xlabel(x_label)
         plt.ylabel(y_label)
         plt.title(title)
-        if line_label:
+        if line_label_a or line_label_b:
             plt.legend()
 
         if a_log.sheet_name and b_log.sheet_name:
