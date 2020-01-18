@@ -148,7 +148,7 @@ class Log_sheet:
                 return values[-1]
         
         else:
-            print("ERROR!, you must locate the save path")
+            print("ERROR!, you must locate the save path or use method save before using this")
 
     def plot(self, x_label="Epoches", y_label=None, line_label=None, title=None):
         if self.save_path:
@@ -169,7 +169,7 @@ class Log_sheet:
             print("This is the graph from "+save_path)
         
         else:
-            print("ERROR!, you must locate the save path")
+            print("ERROR!, you must locate the save path or use method save before using this")
 
     def read(self):
         if self.save_path:
