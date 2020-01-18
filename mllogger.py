@@ -43,8 +43,8 @@ class Logger():
                       If False, log/model will be saved in previous directory. Defualt is False. 
         """
         if not save_inside:
-            global log_path = "../log"
-            global model_path = "../model/"
+            log_path = "../log"
+            model_path = "../model/"
 
         self.logger_name = logger_name
         self.allow_duplicate = allow_duplicate
